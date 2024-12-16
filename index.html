@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Effective Salary Division</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Effective Salary Division</h1>
+        <div class="input-section">
+            <label for="salary">Enter your Salary (₹):</label>
+            <input type="number" id="salary" placeholder="Enter Salary" required>
+            
+            <label for="emi">Enter your EMI (₹):</label>
+            <input type="number" id="emi" placeholder="Enter EMI" value="0">
+        </div>
+        
+        <div class="button-container">
+            <button id="autoCalcBtn">Calculate Automatically</button>
+            <button id="manualCalcBtn">Manual Calculation</button>
+        </div>
+        
+        <div id="manualInput" class="manual-input" style="display:none;">
+            <h3>Set Expense Amounts or Percentages</h3>
+            <label for="savingsInput">Savings (e.g., 50% or 1000):</label>
+            <input type="text" id="savingsInput" placeholder="e.g., 50% or 1000">
+            
+            <label for="medicalInput">Medical (e.g., 20% or 500):</label>
+            <input type="text" id="medicalInput" placeholder="e.g., 20% or 500">
+            
+            <label for="shoppingInput">Shopping (e.g., 10% or 200):</label>
+            <input type="text" id="shoppingInput" placeholder="e.g., 10% or 200">
+            
+            <label for="personalInput">Personal (e.g., 10% or 300):</label>
+            <input type="text" id="personalInput" placeholder="e.g., 10% or 300">
+            
+            <label for="extraInput">Extra (e.g., 10% or 100):</label>
+            <input type="text" id="extraInput" placeholder="e.g., 10% or 100">
+            
+            <button id="calculateManual">Calculate Manually</button>
+        </div>
+        <div id="results" class="results" style="display:none;">
+            <h3>Expense Breakdown</h3>
+            <div class="results-container">
+                <div class="result-box savings">
+                    <h4>Savings:</h4>
+                    <span id="savingsAmount">₹0.00</span>
+                </div>
+                <div class="result-box medical">
+                    <h4>Medical:</h4>
+                    <span id="medicalAmount">₹0.00</span>
+                </div>
+                <div class="result-box shopping">
+                    <h4>Shopping:</h4>
+                    <span id="shoppingAmount">₹0.00</span>
+                </div>
+                <div class="result-box personal">
+                    <h4>Personal:</h4>
+                    <span id="personalAmount">₹0.00</span>
+                </div>
+                <div class="result-box extra">
+                    <h4>Extra:</h4>
+                    <span id="extraAmount">₹0.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
